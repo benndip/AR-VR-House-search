@@ -1,13 +1,16 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import { ViroVRSceneNavigator } from '@viro-community/react-viro'
+import { NavigationContainer } from '@react-navigation/native';
+
 
 import MainNavigator from './src/navigation/MainNavigator'
 
 const App = () => {
   return (
-    <MainNavigator />
+    <NavigationContainer>
+      <MainNavigator />
+    </NavigationContainer>
   )
 }
 

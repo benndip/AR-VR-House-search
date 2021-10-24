@@ -5,11 +5,14 @@ import styles from './Home.style'
 import data from '../../../res/data'
 import { House } from '../../components'
 
-const Home = () => {
+const Home = ({ navigation }) => {
 
     const renderItem = ({ item }) => {
         return (
-            <House item={item} />
+            <House
+                item={item}
+                onPress={() => navigation.navigate('VrHome', { item })}
+            />
         )
     }
 

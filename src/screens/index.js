@@ -1,7 +1,9 @@
-import Home from './Home/Home.screen.js'
-import VrHome from './VrHome/VrHome.js'
+import Home from './Home/Home.screen'
+import VrHome from './VrHome/VrHome'
+import Palor from './HouseOne/Palor.screen'
 
 export {
     VrHome,
-    Home
+    Home,
+    Palor
 }
