@@ -14,26 +14,29 @@ import {
     ViroAnimations
 } from '@viro-community/react-viro'
 
-class Palor extends Component {
-    render() {
-        return (
-            <ViroScene>
-                <Viro360Image source={require('../../../res/images/parlor.jpg')} />
-                <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
+import Room from './Room.screen'
 
-                <ViroText style={{}} text="Welcome to Benndip's Million dollar house!" position={[-1, 0, -1]} />
-                <ViroNode
-                    position={[-1, 0, -1]}
-                >
-                    <ViroSphere
-                        radius={0.15}
-                        materials={["sphere1"]}
-                        animation={{ name: 'spin', run: true, loop: true }}
-                    />
-                </ViroNode>
-            </ViroScene>
-        )
-    }
+const Palor = ({ sceneNavigator }) => {
+    return (
+        <ViroScene>
+            <Viro360Image source={require('../../../res/images/house1/h1.jpg')} />
+            <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
+            <ViroNode
+                position={[-1, 0, -1]}
+            >
+                <ViroSphere
+                    position={[0, 0, 0]}
+                    radius={0.1}
+                    materials={["sphere1"]}
+                    animation={{ name: 'spin', run: true, loop: true }}
+                    onHover={(isHovering, position, source) => {
+                        sceneNavigator.push({ scene: Room })
+                    }}
+                />
+                <ViroText position={[0.1, -0.7, -1]} text="Enter Room" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+            </ViroNode>
+        </ViroScene>
+    )
 }
 
 ViroMaterials.createMaterials({

@@ -1,7 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, LogBox } from 'react-native'
 
 import { NavigationContainer } from '@react-navigation/native';
+
+LogBox.ignoreLogs([
+  'Non-serializable values were found in the navigation state',
+]);
 
 
 import MainNavigator from './src/navigation/MainNavigator'
