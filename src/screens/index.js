@@ -1,9 +1,13 @@
 import Home from './Home/Home.screen'
-import VrHome from './VrHome/VrHome'
+
+import VrHomeOne from './VrHomeOne/VrHomeOne'
+import VrHomeTwo from './VrHomeTwo/VrHomeTwo'
+
 import Palor from './HouseOne/Palor.screen'
 
 export {
-    VrHome,
+    VrHomeOne,
+    VrHomeTwo,
     Home,
     Palor
 }

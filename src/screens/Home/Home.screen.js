@@ -11,7 +11,7 @@ const Home = ({ navigation }) => {
         return (
             <House
                 item={item}
-                onPress={() => navigation.navigate('VrHome', { item })}
+                onPress={() => navigation.navigate(item.route, { item })}
             />
         )
     }

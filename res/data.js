@@ -9,10 +9,18 @@ const data = [
         images: [
             require('../res/images/house1/h1.jpg')
         ],
-        scenes: [
-            require('../src/screens/HouseOne/Palor.screen')
-        ]
-    }
+        route: 'VrHomeOne'
+    },
+    {
+        id: 2,
+        name: "Office Space",
+        price: 150000,
+        images: [
+            require('../res/images/house2/h1.jpg')
+        ],
+        route: 'VrHomeTwo'
+    },
+
 ];
 
 export default data

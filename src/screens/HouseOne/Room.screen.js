@@ -4,39 +4,33 @@ import { View, Text } from 'react-native'
 import {
     ViroScene,
     Viro360Image,
-    ViroBox,
-    ViroButton,
     ViroNode,
-    ViroOrbitCamera,
     ViroCamera,
     ViroText,
     ViroSphere,
     ViroMaterials,
-    ViroAnimations
+    ViroAnimations,
+    ViroAmbientLight
 } from '@viro-community/react-viro'
 
 const Room = ({ sceneNavigator }) => {
 
-    const [loading360Image, setLoading360Image] = useState(false)
-
-    const _onLoadStart = () => {
-        setLoading360Image(true)
-    }
+    const [loading360Image, setLoading360Image] = useState(true)
 
     const _onLoadEnd = () => {
-        setLoading360Image(true)
+        setLoading360Image(false)
     }
 
     return (
         <ViroScene>
+            <ViroAmbientLight color="#ffffff" />
             <Viro360Image
                 source={require('../../../res/images/house1/r1.jpg')}
-                onLoadStart={_onLoadStart}
                 onLoadEnd={_onLoadEnd}
             />
             <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
             <ViroNode
-                position={[-1, 0, -1]}
+                position={[-1.5, 0, -1]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -50,9 +44,9 @@ const Room = ({ sceneNavigator }) => {
                 <ViroText position={[0.1, -0.7, -1]} text="Back To Palor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             {
-                !loading360Image
+                loading360Image
                 &&
-                <ViroText text="Loading room..." position={[0, 0, 0]} />
+                <ViroText text="Loading Room..." position={[0, 0, 0]} />
             }
         </ViroScene>
     )
