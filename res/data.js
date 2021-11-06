@@ -1,6 +1,4 @@
 
-import { Palor } from '../src/screens'
-
 const data = [
     {
         id: 1,
@@ -19,6 +17,15 @@ const data = [
             require('../res/images/house2/h1.jpg')
         ],
         route: 'VrHomeTwo'
+    },
+    {
+        id: 3,
+        name: "Lord of the rings",
+        price: 80000,
+        images: [
+            require('../res/images/house3/h1.jpg')
+        ],
+        route: 'VrHomeThree'
     },
 
 ];

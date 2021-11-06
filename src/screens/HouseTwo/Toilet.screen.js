@@ -25,7 +25,7 @@ const Toilet = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/house1/t1.jpg')}
+                source={require('../../../res/images/space/Toilet.jpg')}
                 onLoadEnd={_onLoadEnd}
             />
             <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />

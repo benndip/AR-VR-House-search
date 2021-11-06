@@ -4,15 +4,15 @@ import {
     ViroVRSceneNavigator,
 } from '@viro-community/react-viro'
 
-import Palor from '../HouseTwo/Palor.screen'
+import FrontBank from '../HouseTwo/FrontBank.screen'
 
 const VrHomeTwo = () => {
     return (
         <ViroVRSceneNavigator
             initialScene={{
-                scene: Palor
+                scene: FrontBank
             }}
-            onExitViro={()=>this.props.sceneNavigator.pop()}
+            onExitViro={() => this.props.sceneNavigator.pop()}
         />
     )
 }
