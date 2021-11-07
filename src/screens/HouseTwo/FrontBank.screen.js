@@ -21,10 +21,12 @@ const Palor = ({ sceneNavigator }) => {
     return (
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
-            <Viro360Image source={require('../../../res/images/space/FrontBank.jpg')} />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
+            <Viro360Image source={require('../../../res/images/space/FrontBank.JPG')} />
+            <ViroCamera position={[1, 0, 0]} active={true} rotation={[0, 90, 0]} />
             <ViroNode
-                position={[-0.3, 0.3, -1]}
+                position={[-4, 0.3, -5]}
+                rotation={[0, 45, 0]}
+                scale={[2.0, 2.0, 2.0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -35,7 +37,24 @@ const Palor = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: FrontStairs })
                     }}
                 />
-                <ViroText position={[0, -0.4, 0]} text="Climb Stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText
+                    position={[-6, 1, 1]}
+                    rotation={[0, 65, 12]}
+                    text="Welcome to Active Spaces building. This Experience is powered by Digital Renter"
+                    style={{ color: '#ffffff', fontWeight: 'bold' }}
+                />
+                <ViroText
+                    position={[-6, -1, 1]}
+                    text="Enjoy!!!"
+                    style={{ color: '#f1f2f6', fontWeight: 'bold', fontSize: 40 }}
+                    rotation={[0, 65, 15]}
+                />
+                <ViroText
+                    position={[0, -0.6, 0]}
+                    text="Climb Stairs"
+                    style={{ color: '#ffffff', fontWeight: 'bold' }}
+                    rotation={[0, -10, 0]}
+                />
             </ViroNode>
         </ViroScene>
     )

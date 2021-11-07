@@ -25,10 +25,10 @@ const DrOffice = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/DrOffice.jpg')}
+                source={require('../../../res/images/space/DrOffice.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
+            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
             <ViroNode
                 position={[-1.5, 0, -1]}
             >
@@ -41,12 +41,12 @@ const DrOffice = ({ sceneNavigator }) => {
                         sceneNavigator.pop()
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Back To Palor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0.1, -0.7, -1]} text="Back To Corridor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             {
                 loading360Image
                 &&
-                <ViroText text="Loading DrOffice..." position={[0, 0, 0]} />
+                <ViroText text="Loading DR Office..." position={[0, 0, 0]} />
             }
         </ViroScene>
     )

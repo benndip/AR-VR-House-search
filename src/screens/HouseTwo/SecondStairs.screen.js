@@ -28,12 +28,12 @@ const SecondStairs = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/SecondStairs.jpg')}
+                source={require('../../../res/images/space/SecondStairs.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
+            <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, -85, 0]} />
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[0, 0, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -44,10 +44,15 @@ const SecondStairs = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: ThirdStairs })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, 0]} text="Climb Stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText
+                    position={[0, 0, 0]}
+                    text="Climb Stairs"
+                    style={{ color: '#f1f2f6', fontWeight: 'bold' }}
+                />
             </ViroNode>
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[-1.6, 0, -1]}
+                rotation={[0, -90, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -58,7 +63,11 @@ const SecondStairs = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: FirstStairs })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, 0]} text="Go down stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText
+                    position={[0, 0, 0]}
+                    text="Go down stairs"
+                    style={{ color: '#f1f2f6', fontWeight: 'bold' }}
+                />
             </ViroNode>
             {
                 loading360Image

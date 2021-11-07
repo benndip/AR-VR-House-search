@@ -28,12 +28,13 @@ const Room = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/FirstStairs.jpg')}
+                source={require('../../../res/images/space/FirstStairs.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
+            <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, -85, 0]} />
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[1, 1, 0.7]}
+                rotation={[0, -90, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -44,10 +45,11 @@ const Room = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: SecondStairs })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Climb Stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0.4, -0.3, -1]} text="Climb Stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[-3.6, -1.4, -0.2]}
+                rotation={[0, 90, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -58,7 +60,7 @@ const Room = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: FrontStairs })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Go down stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0, 0, 0]} text="Go down stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             {
                 loading360Image

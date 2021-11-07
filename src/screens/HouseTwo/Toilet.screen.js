@@ -13,6 +13,8 @@ import {
     ViroAmbientLight
 } from '@viro-community/react-viro'
 
+import CorridorTwo from './CorridorTwo.screen'
+
 const Toilet = ({ sceneNavigator }) => {
 
     const [loading360Image, setLoading360Image] = useState(true)
@@ -25,10 +27,10 @@ const Toilet = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/Toilet.jpg')}
+                source={require('../../../res/images/space/Toilet.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
+            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
             <ViroNode
                 position={[-1.5, 0, -1]}
             >
@@ -38,10 +40,10 @@ const Toilet = ({ sceneNavigator }) => {
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
                     onHover={(isHovering, position, source) => {
-                        sceneNavigator.pop()
+                        sceneNavigator.push({ scene: CorridorTwo })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Back To Palor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0.1, -0.7, -1]} text="Back to Corridor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             {
                 loading360Image

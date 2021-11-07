@@ -22,10 +22,11 @@ const FrontStairs = ({ sceneNavigator }) => {
     return (
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
-            <Viro360Image source={require('../../../res/images/space/FrontStairs.jpg')} />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
+            <Viro360Image source={require('../../../res/images/space/FrontStairs.JPG')} />
+            <ViroCamera position={[1, 0, 0]} active={true} rotation={[0, -90, 0]} />
             <ViroNode
-                position={[-0.3, 0.3, -1]}
+                position={[3, 0.5, 0.7]}
+                rotation={[0, -85, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -36,10 +37,16 @@ const FrontStairs = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: FirstStairs })
                     }}
                 />
-                <ViroText position={[0, -0.4, 0]} text="Climb Stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText
+                    position={[0, -0.6, 0]}
+                    text="Climb Stairs"
+                    style={{ color: '#ffffff', fontWeight: 'bold' }}
+                    rotation={[0, -10, 0]}
+                />
             </ViroNode>
             <ViroNode
-                position={[-0.3, 0.3, -1]}
+                position={[3, -0.7, 0.7]}
+                rotation={[0, -85, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -50,7 +57,12 @@ const FrontStairs = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: FrontBank })
                     }}
                 />
-                <ViroText position={[0, -0.4, 0]} text="Go down Stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText
+                    position={[0.2, -0.6, 0]}
+                    text="Go to gate"
+                    style={{ color: '#f1f2f6', fontWeight: 'bold' }}
+                    rotation={[0, -10, 5]}
+                />
             </ViroNode>
         </ViroScene>
     )

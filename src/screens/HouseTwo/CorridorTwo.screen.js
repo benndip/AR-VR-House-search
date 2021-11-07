@@ -17,7 +17,7 @@ import ConferenceRoom from './ConferenceRoom.screen'
 import Toilet from './Toilet.screen'
 import CorridorOne from './CorridorOne.screen'
 
-const CorridorOne = ({ sceneNavigator }) => {
+const CorridorTwo = ({ sceneNavigator }) => {
 
     const [loading360Image, setLoading360Image] = useState(true)
 
@@ -29,10 +29,10 @@ const CorridorOne = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/CorridorOne.jpg')}
+                source={require('../../../res/images/space/CorridorOne.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
+            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
             <ViroNode
                 position={[-1.5, 0, -1]}
             >
@@ -48,7 +48,7 @@ const CorridorOne = ({ sceneNavigator }) => {
                 <ViroText position={[0.1, -0.7, -1]} text="Enter Conference Room" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[-1.5, 0, 1]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -101,4 +101,4 @@ ViroAnimations.registerAnimations({
     },
 })
 
-export default CorridorOne
+export default CorridorTwo

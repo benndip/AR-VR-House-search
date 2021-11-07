@@ -28,7 +28,7 @@ const Veranda = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/Veranda.jpg')}
+                source={require('../../../res/images/space/Veranda.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
             <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
