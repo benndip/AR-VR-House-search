@@ -31,12 +31,13 @@ const Veranda = ({ sceneNavigator }) => {
                 source={require('../../../res/images/space/Veranda.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} />
+            <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, -90, 0]} />
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[1.5, 0, 1.9]}
+                rotation={[0, -75, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
+                    position={[0, -0.4, -1]}
                     radius={0.1}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
@@ -44,13 +45,14 @@ const Veranda = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: Lobby })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Go to Lobby" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0.1, -1, -1]} text="Enter Lobby" style={{fontSize: 30, color: '#000000', fontWeight: 'bold' }} />
             </ViroNode>
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[-1.5, -0.4, 1.9]}
+                rotation={[0, 75, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
+                    position={[0, 0.2, 0]}
                     radius={0.1}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
@@ -58,7 +60,7 @@ const Veranda = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: ThirdStairs })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Go down stairs" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0, -0.5, 0]} text="Go down stairs" style={{fontSize: 20, color: '#000000', fontWeight: 'bold' }} />
             </ViroNode>
             {
                 loading360Image

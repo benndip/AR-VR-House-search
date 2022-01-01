@@ -32,9 +32,8 @@ const CorridorOne = ({ sceneNavigator }) => {
                 source={require('../../../res/images/space/CorridorOne.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[1.5, 0, -1]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -48,7 +47,8 @@ const CorridorOne = ({ sceneNavigator }) => {
                 <ViroText position={[0.1, -0.7, 0]} text="Enter DR office" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             <ViroNode
-                position={[-1.5, 0, -2]}
+                position={[2.5, 0.3, 0.2]}
+                rotation={[0, -95, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -62,7 +62,8 @@ const CorridorOne = ({ sceneNavigator }) => {
                 <ViroText position={[0.1, -0.7, 0]} text="Move ahead" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             <ViroNode
-                position={[1.5, 0, -1]}
+                position={[-1.5, 0, 0.3]}
+                rotation={[0, 95, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -73,7 +74,11 @@ const CorridorOne = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: Lobby })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Go to Lobby" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText
+                    position={[0.1, -0.7, -1]}
+                    text="Go to Lobby"
+                    style={{ color: '#000000', fontWeight: 'bold' }}
+                />
             </ViroNode>
             {
                 loading360Image

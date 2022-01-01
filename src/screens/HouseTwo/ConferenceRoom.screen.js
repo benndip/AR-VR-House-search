@@ -30,20 +30,21 @@ const ConferenceRoom = ({ sceneNavigator }) => {
                 source={require('../../../res/images/space/ConferenceRoom.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
+            <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, -90, 0]} />
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[-1.5, -1.5, -1]}
+                rotation={[0, 40, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
-                    radius={0.1}
+                    position={[0.1, 0, -1]}
+                    radius={0.15}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
                     onHover={(isHovering, position, source) => {
                         sceneNavigator.push({ scene: CorridorTwo })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Back To Corridor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0.1, -0.7, -1]} text="Back To Corridor" style={{ fontSize: 22, color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             {
                 loading360Image

@@ -53,7 +53,7 @@ const ThirdStairs = ({ sceneNavigator }) => {
                 rotation={[0, -95, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
+                    position={[0, 0.2, 0]}
                     radius={0.1}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
@@ -64,7 +64,7 @@ const ThirdStairs = ({ sceneNavigator }) => {
                 <ViroText
                     position={[-0.2, -0.6, 0]}
                     text="Go down stairs"
-                    style={{ color: '#f1f2f6', fontWeight: 'bold' }}
+                    style={{ color: '#f1f2f6', fontWeight: 'bold', fontSize:23}}
                     rotation={[0, -190, 0]}
                 />
             </ViroNode>

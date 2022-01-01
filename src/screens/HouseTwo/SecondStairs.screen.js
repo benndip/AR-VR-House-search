@@ -31,9 +31,10 @@ const SecondStairs = ({ sceneNavigator }) => {
                 source={require('../../../res/images/space/SecondStairs.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, -85, 0]} />
+            <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, -90, 0]} />
             <ViroNode
-                position={[0, 0, 0]}
+                position={[1.5, 0.8, 0.5]}
+                rotation={[0, -95, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -45,18 +46,18 @@ const SecondStairs = ({ sceneNavigator }) => {
                     }}
                 />
                 <ViroText
-                    position={[0, 0, 0]}
+                    position={[0.1, -0.62, 0]}
                     text="Climb Stairs"
-                    style={{ color: '#f1f2f6', fontWeight: 'bold' }}
+                    style={{ fontSize: 15, color: '#000000', fontWeight: 'bold' }}
                 />
             </ViroNode>
             <ViroNode
-                position={[-1.6, 0, -1]}
-                rotation={[0, -90, 0]}
+                position={[-1.8, -2.0, 3.5]}
+                rotation={[0, 180, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
-                    radius={0.1}
+                    position={[-0.2, 0.2, 0]}
+                    radius={0.2}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
                     onHover={(isHovering, position, source) => {
@@ -64,9 +65,9 @@ const SecondStairs = ({ sceneNavigator }) => {
                     }}
                 />
                 <ViroText
-                    position={[0, 0, 0]}
+                    position={[0, -0.6, 0]}
                     text="Go down stairs"
-                    style={{ color: '#f1f2f6', fontWeight: 'bold' }}
+                    style={{ color: '#f1f2f6', fontWeight: 'bold', fontSize:23}}
                 />
             </ViroNode>
             {

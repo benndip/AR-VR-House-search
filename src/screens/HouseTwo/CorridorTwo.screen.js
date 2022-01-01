@@ -29,15 +29,15 @@ const CorridorTwo = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/CorridorOne.JPG')}
+                source={require('../../../res/images/space/CorridorTwo.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
+            <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, 0, 0]} />
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[1.1, 0.3, -1]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
+                    position={[-0.2, 0, -1]}
                     radius={0.1}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
@@ -48,10 +48,11 @@ const CorridorTwo = ({ sceneNavigator }) => {
                 <ViroText position={[0.1, -0.7, -1]} text="Enter Conference Room" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             <ViroNode
-                position={[-1.5, 0, 1]}
+                position={[-1.5, -0.9, 0.8]}
+                rotation={[0, 110, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
+                    position={[0, 0, -1]}
                     radius={0.1}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
@@ -59,13 +60,14 @@ const CorridorTwo = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: CorridorOne })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Move ahead" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0.1, -0.6, -1]} text="Move ahead" style={{ color: '#000000', fontWeight: 'bold' }} />
             </ViroNode>
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[1.5, -0.7, -0.7]}
+                rotation={[0, -135, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
+                    position={[0.1, 0, -1]}
                     radius={0.1}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}

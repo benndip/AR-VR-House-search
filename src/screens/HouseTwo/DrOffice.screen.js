@@ -28,12 +28,12 @@ const DrOffice = ({ sceneNavigator }) => {
                 source={require('../../../res/images/space/DrOffice.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[-1.5, -0.7, 1]}
+                rotation={[0, 150, 0]}
             >
                 <ViroSphere
-                    position={[0, 0, 0]}
+                    position={[-0.35, 0.3, 0]}
                     radius={0.1}
                     materials={["sphere1"]}
                     animation={{ name: 'spin', run: true, loop: true }}
@@ -41,7 +41,7 @@ const DrOffice = ({ sceneNavigator }) => {
                         sceneNavigator.pop()
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Back To Corridor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText position={[0.2, -0.7, -1]} text="Back To Corridor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
             </ViroNode>
             {
                 loading360Image

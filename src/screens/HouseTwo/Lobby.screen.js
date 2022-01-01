@@ -31,9 +31,10 @@ const Lobby = ({ sceneNavigator }) => {
                 source={require('../../../res/images/space/Lobby.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
-            {/* <ViroCamera position={[-1, 0, 0]} active={true} rotation={[0, 0, 0]} /> */}
+            <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, -55, 0]} />
             <ViroNode
-                position={[-1.5, 0, -1]}
+                position={[2.4, 0, 0.5]}
+                rotation={[0, -70, 0]}
             >
                 <ViroSphere
                     position={[0, 0, 0]}
@@ -44,7 +45,11 @@ const Lobby = ({ sceneNavigator }) => {
                         sceneNavigator.push({ scene: CorridorOne })
                     }}
                 />
-                <ViroText position={[0.1, -0.7, -1]} text="Go to corridor" style={{ color: '#f1f2f6', fontWeight: 'bold' }} />
+                <ViroText
+                    position={[0.1, -0.7, 0]}
+                    text="Go to corridor"
+                    style={{ color: '#f1f2f6', fontWeight: 'bold', fontSize: 23 }}
+                />
             </ViroNode>
             <ViroNode
                 position={[-1.5, 0, -1]}

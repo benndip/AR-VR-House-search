@@ -4,6 +4,8 @@ import {
     ViroVRSceneNavigator,
 } from '@viro-community/react-viro'
 
+import styles from './VrHomeTwo.style'
+
 import FrontBank from '../HouseTwo/FrontBank.screen'
 
 const VrHomeTwo = () => {
@@ -12,7 +14,6 @@ const VrHomeTwo = () => {
             initialScene={{
                 scene: FrontBank
             }}
-            onExitViro={() => this.props.sceneNavigator.pop()}
         />
     )
 }
