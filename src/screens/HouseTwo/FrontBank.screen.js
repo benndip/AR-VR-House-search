@@ -16,8 +16,6 @@ import FrontStairs from './FrontStairs.screen'
 
 const Palor = ({ sceneNavigator }) => {
 
-    const [runTimer, setRunTimer] = useState(false)
-
     return (
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />

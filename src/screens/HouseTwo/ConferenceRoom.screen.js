@@ -27,7 +27,7 @@ const ConferenceRoom = ({ sceneNavigator }) => {
         <ViroScene>
             <ViroAmbientLight color="#ffffff" />
             <Viro360Image
-                source={require('../../../res/images/space/ConferenceRoom.JPG')}
+                source={require('../../../res/images/space/DrOffice.JPG')}
                 onLoadEnd={_onLoadEnd}
             />
             <ViroCamera position={[0, 0, 0]} active={true} rotation={[0, -90, 0]} />

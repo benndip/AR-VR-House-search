@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { View } from 'react-native'
 import {
     ViroVRSceneNavigator,
@@ -9,12 +9,28 @@ import styles from './VrHomeTwo.style'
 import FrontBank from '../HouseTwo/FrontBank.screen'
 
 const VrHomeTwo = () => {
+
+    const [showScene, setShowScene] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShowScene(true)
+        }, 1000);
+      
+      }, [])
+
     return (
-        <ViroVRSceneNavigator
-            initialScene={{
-                scene: FrontBank
-            }}
-        />
+        <>
+            {
+                showScene
+                &&
+                <ViroVRSceneNavigator
+                    initialScene={{
+                        scene: FrontBank
+                    }}
+                />
+            }
+        </>
     )
 }
 

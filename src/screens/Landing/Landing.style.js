@@ -15,20 +15,20 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     largeText: {
-        top: height * 0.45,
+        top: height * 0.55,
         position: 'absolute',
         alignSelf: 'center',
         fontSize: 25,
         color: '#ecf0f1',
         zIndex: 99999,
-        // textAlign: 'ce'
+        textAlign: 'center'
     },
     smallText: {
-        top: height * 0.57,
+        top: height * 0.67,
         position: 'absolute',
         alignSelf: 'center',
         fontSize: 16,
-        color: '#576574',
+        color: '#ff793f',
         zIndex: 99999,
         textAlign: 'center',
         fontWeight: 'bold'
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         position: 'absolute',
         alignItems: 'center',
-        top: height * 0.67,
+        top: height * 0.77,
         backgroundColor: '#130f40',
         borderRadius: 10
     },
@@ -59,6 +59,15 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 16,
         letterSpacing: 3
+    },
+    welcomeText: {
+        position: 'absolute',
+        alignSelf: 'center',
+        top: height * 0.1,
+        fontWeight: 'bold',
+        color: '#ffffff',
+        fontSize: 25,
+        letterSpacing: 4
     }
 });
 

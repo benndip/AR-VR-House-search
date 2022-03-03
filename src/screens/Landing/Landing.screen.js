@@ -3,7 +3,11 @@ import { View, Text, Image, TouchableOpacity, StatusBar } from 'react-native'
 import {
     ViroScene,
     ViroSkyBox,
-    ViroVRSceneNavigator
+    ViroVRSceneNavigator,
+    Viro3DObject,
+    ViroAmbientLight,
+    ViroBox,
+    ViroOrbitCamera
 } from '@viro-community/react-viro'
 
 import styles from './Landing.style'
@@ -13,6 +17,7 @@ import FrontStairs from '../HouseTwo/FrontBank.screen'
 const LandingScene = () => {
     return (
         <ViroScene>
+            <ViroAmbientLight color="#ffffff" />
             <ViroSkyBox source={{
                 nx: require('../../../res/images/grid_bg.jpg'),
                 px: require('../../../res/images/grid_bg.jpg'),
@@ -21,6 +26,17 @@ const LandingScene = () => {
                 nz: require('../../../res/images/grid_bg.jpg'),
                 pz: require('../../../res/images/grid_bg.jpg')
             }} />
+            <ViroOrbitCamera active={true} position={[0, 0, -0]} focalPoint={[0, 0, -0.5]} />
+            <Viro3DObject
+                source={require("../../../res/autumn_house/house.obj")}
+                resources={[
+                    require('../../../res/autumn_house/house.mtl'),
+                ]}
+                position={[0, -1, -4]}
+                scale={[0.1, 0.1, 0.1]}
+                rotation={[0, -90, 0]}
+                type="OBJ"
+            />
         </ViroScene>
     )
 }
@@ -29,23 +45,19 @@ const Landing = ({ navigation, sceneNavigator }) => {
     return (
         <View style={styles.container}>
             <StatusBar hidden />
-            {/* <ViroVRSceneNavigator
+            <ViroVRSceneNavigator
                 vrModeEnabled={false}
                 initialScene={{
                     scene: LandingScene,
                 }}
-            /> */}
-            <Image
-                source={require('../../../res/images/gearVr.png')}
-                style={styles.image}
             />
-
             <TouchableOpacity
                 style={styles.exploreBtn}
                 onPress={()=>navigation.navigate('VrHomeTwo')}
             >
                 <Text style={styles.exploreTxt}>Explore</Text>
             </TouchableOpacity>
+            <Text style={styles.welcomeText}>Welcome to DrVerse</Text>
             <Text style={styles.largeText}>Explore Virtual World You Have Never Felt Like .</Text>
             <Text style={styles.smallText}>Embark your journey to the limitless virtual world in your home.</Text>
             <Text style={styles.poweredByDr}>Powered by Digital Renter</Text>
